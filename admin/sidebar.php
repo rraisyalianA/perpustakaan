@@ -13,7 +13,7 @@ $notif_kembali = mysqli_fetch_assoc($q_kembali)['total'];
 
 <div class="sidebar">
     <div class="sidebar-header">
-        <i class="fas fa-book-reader" style="color: var(--accent);"></i>
+        <i class="fas fa-book-open" style="color: var(--accent);"></i>
         <span>PerpusAdmin</span>
     </div>
 

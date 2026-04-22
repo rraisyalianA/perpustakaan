@@ -1,0 +1,113 @@
+/* Notifikasi & Dropdown */
+.notif-wrapper { 
+    position: relative; 
+}
+
+#btn-notif {
+    cursor: pointer; 
+    background: white; 
+    padding: 10px; 
+    border-radius: 50%; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    transition: 0.3s;
+}
+
+#btn-notif:hover {
+    background: #f8f9fa;
+    transform: scale(1.1);
+}
+
+.notif-dropdown {
+    display: none; 
+    position: absolute; 
+    right: 0; 
+    top: 45px; 
+    width: 300px;
+    background: white; 
+    border-radius: 10px; 
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    z-index: 1000; 
+    border: 1px solid #eee; 
+    animation: fadeIn 0.3s ease;
+}
+
+.notif-badge {
+    position: absolute; 
+    top: -5px; 
+    right: -5px; 
+    background: #e74c3c;
+    color: white; 
+    font-size: 10px; 
+    padding: 2px 6px; 
+    border-radius: 50%;
+    font-weight: bold; 
+    border: 2px solid white;
+}
+
+/* Grid Buku */
+.book-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+    gap: 25px; 
+    padding: 10px 0;
+}
+
+/* CARD BUKU DENGAN EFEK CEMBUNG (HOVER) */
+.card-book {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 100%;
+    text-align: center;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efek Kenyal */
+    border: 1px solid transparent;
+}
+
+/* Efek saat Kursor Nempel */
+.card-book:hover {
+    transform: scale(1.05) translateY(-5px); /* Membesar & naik dikit */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    border-color: #55afba; /* Warna accent kamu */
+    z-index: 5;
+}
+
+.card-book h4 {
+    height: 40px; 
+    overflow: hidden;
+    margin: 15px 0 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #2c3e50;
+    line-height: 1.2;
+}
+
+.img-cover {
+    width: 100%; 
+    height: 240px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+    transition: 0.4s;
+}
+
+/* Gambar ikut nge-zoom dikit pas di hover */
+.card-book:hover .img-cover {
+    transform: scale(1.02);
+}
+
+/* Info Tambahan */
+.card-book p {
+    font-size: 13px;
+    color: #7f8c8d;
+    margin-bottom: 5px;
+}
+
+/* Animasi Pop-up */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
